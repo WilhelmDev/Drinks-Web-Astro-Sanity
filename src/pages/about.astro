@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import image from '../img/header.jpg'
+---
+
+<Layout title='Nosotros' description='Tienda de Bebidas Personalizada'>
+	<main class="contenedor">
+		<h1 class="heading">Nosotros</h1>
+		<div class="contenido">
+			<img src={image} alt="imagen">
+			<div>
+				<p>
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos incidunt praesentium soluta blanditiis quas ipsam hic? Rerum labore est soluta mollitia ipsam minus, voluptates veniam quos consectetur inventore optio. Illum!
+					Numquam officiis error nihil, perferendis assumenda sit ea ex eligendi cum maxime ab incidunt quibusdam voluptatem porro ad. Atque perspiciatis doloremque quas nisi consequuntur reiciendis deleniti officia cum libero dolorem.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eligendi rerum nesciunt hic quas sint ab culpa! Assumenda, quis voluptate quidem, non autem, esse eveniet voluptatum voluptatibus impedit sint necessitatibus.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde optio, dolorem sint ea eos totam exercitationem tempora ipsa consequuntur iure assumenda repudiandae facilis libero quo ratione quod qui quia eaque?
+				</p>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.contenido {
+    display: grid;
+    gap: 4rem;
+}
+@media screen and (min-width: 768px) {
+    .contenido {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+</style>

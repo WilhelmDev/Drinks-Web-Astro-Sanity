@@ -1,0 +1,24 @@
+---
+import { getWhiskey } from '../../client';
+import BottleList from '../components/BottleList.astro';
+import Layout from '../layouts/Layout.astro';
+const whiskeyBottles = await getWhiskey()
+---
+
+<Layout title='whiskey' description='Tienda de Bebidas Personalizada'>
+	<main class="contenedor">
+		<h1 class="heading">Whiskey</h1>
+		<div class="grid">
+			{whiskeyBottles?.map((bottle) => (
+				<BottleList 
+				name={bottle.name} image={bottle.drink_image_cloud.url}
+				price={bottle.price} url={bottle.url_product.current}
+				/>
+			))}
+		</div>
+	</main>
+</Layout>
+
+<style>
+	
+</style>
